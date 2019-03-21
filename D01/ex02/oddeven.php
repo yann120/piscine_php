@@ -4,9 +4,7 @@
 	{
 		echo "Entrez un nombre: ";
 		$entry = fgets(STDIN);
-
 		$entry = trim($entry);
-
 		if (is_numeric($entry))
 		{
 			if ($entry % 2 == 0)
