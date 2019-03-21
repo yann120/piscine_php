@@ -8,36 +8,44 @@
 <body>
 	<header>
 		<div class="topbar grayblock">
-			<img src="resources/day_of_the_42.png" id="day">
+			<img src="resources/day_of_the_42.png" id="day" alt="Une journée à 42 pour les non anglophones">
+			<img src="resources/loupe.png" id="loupe" alt="loupe">
 			<div id="smbuttonbox">
-				<img src="resources/reload.png" class="sm_button"></img>
-				<img src="resources/close.gif" class="sm_button down"></img>
+				<a href="https://www.disney.com"><img src="resources/reload.png" class="sm_button" alt="Recommencer au début"></img></a>
+				<a href="https://www.relaischateaux.com"><img src="resources/close.gif" class="sm_button down" alt="Déconnecter"></img></a>
 			</div>
 		</div>
 	</header>
 
 	<div class="center">
-		<div class="vertical" id="left" style="background-color: purple">
-			<img src="resources/arrow.png" class="icon"></img>
-			<img src="resources/main.png" class="icon"></img>
-			<img src="resources/oeil.png" class="icon"></img>
-			<img src="resources/outil.png" class="icon"></img>
-			<img src="resources/chat-icon.png" class="icon"></img>
+		<div class="vertical grayblock" id="left">
+			<img src="resources/arrow.png" class="icon" alt="Avancer"></img>
+			<img src="resources/main.png" class="icon" alt="Prendre"></img>
+			<img src="resources/oeil.png" class="icon" id="oeil" alt="Regarder"></img>
+			<img src="resources/outil.png" class="icon" alt="Utiliser"></img>
+			<img src="resources/chat-icon.png" class="icon" alt="Parler"></img>
 		</div>
-		<div id="central" style="background-color: black">
-			<img src="resources/cluster.jpg" id="centralimg"></img>
+		<div id="central" class="grayblock">
+			<img src="resources/cluster.jpg" id="centralimg" alt="Un cluster"></img>
+			<a href="https://www.ikea.com/" id="ikea"></a>
+			<a href="https://www.apple.com/" id="apple"></a>
 		</div>
-		<div class="vertical" id="right" style="background-color: yellow">
-			<img src="resources/book.png" class="icon"></img>
-			<img src="resources/towel.png" class="icon"></img>
-			<div id="brick">
-				<br><br>
+		<div class="vertical grayblock" id="right">
+			<img src="resources/book.png" class="icon" alt="Livre"></img>
+			<img src="resources/towel.png" class="icon" alt="Serviette"></img>
+			<div id="brick" alt="Briques">
+				<br><br><br>
 			</div>
 		</div>
 	</div>
 	<div id="bottom">
 		<div id="greenbox">
-			<p>Vous <strong>entrez</strong> alors dans une grande piece remplie d'<span id="txt_shadow">ordinateurs</span>...</p>
+			<p>Vous <span id="entrez">entrez</span> alors dans une grande piece remplie d'<span id="txt_shadow">ordinateurs</span>...</p>
+			<p id="bonjour">- Bonjour, vous êtes nouveau ici ?</p>
+			<form>
+				<input type="text" id="nouveau">
+				<input type="submit" value="Repondre" id="submit">
+			</form>
 		</div>
 	</div>
 </body>

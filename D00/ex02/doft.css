@@ -2,10 +2,18 @@ html, body {
 	width: 100%;
 	height: 100%;
 	margin: auto;
+	background-color: rgb(80, 80, 80);
 	}
 
 img {
 	margin: 8px;
+}
+
+
+p {
+  font-size: 0.85vw;
+  font-family: Verdana;
+  margin: 0;
 }
 
 .topbar {
@@ -16,9 +24,18 @@ img {
 	justify-content: space-between;
 	margin-top: 1%;
 }
+
+
 .grayblock {
 	background-color:  rgb(144, 144, 144);	
+	box-shadow: 8px 8px 4px black;
+	border-radius: 7px;
+}
 
+#loupe {
+	position: absolute;
+	padding-left: 54%;
+	width: 13%;
 }
 
 .sm_button {
@@ -37,7 +54,6 @@ img {
 #smbuttonbox {
 	height: auto;
 	width: 4%;
-	background-color: blue;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -54,7 +70,7 @@ img {
 .center {
 	display: flex;
 	justify-content: center;
-	background-color: green;
+	/*background-color: green;*/
 	margin-top: 1.5%;
 	/*height: auto;*/
 }
@@ -75,6 +91,26 @@ img {
 	/*object-fit: cover;*/
 }
 
+#ikea {
+	/*background-color: blue;*/
+	float: left;
+	width:17%;
+	height: 140px;
+	margin-top: -25%;
+	margin-left: 30%;
+	position: relative;
+}
+
+#apple {
+	/*background-color: blue;*/
+	float: left;
+	width:19%;
+	height: 100px;
+	margin-top: -27%;
+	margin-left: 78%;
+	position: relative;
+}
+
 #left {
 	padding-bottom: 1.4%;
 }
@@ -85,7 +121,7 @@ img {
 
 #brick {
 	background : url("resources/brick.jpg");
-	background-size: 30%;
+	background-size: 25%;
 	width: 85%
 	/*margin-bottom: 10%;*/
 }
@@ -100,6 +136,11 @@ img {
 	/*display: flex;*/
 	/*justify-content: center;*/
 }
+
+#oeil {
+	border:2px solid red;
+ 	border-radius: 3px;
+}
 #bottom {
 	display: grid;
 /*	 85 / 230 / 525
@@ -109,5 +150,37 @@ img {
 #greenbox {
 	background-color: rgb(140, 253, 142);
 	grid-column-start: 2;
-	margin-top: -10%
+	margin-top: -10%;
+	padding: 1.5%;
+	padding-bottom: 11%;
+	box-shadow: 8px 8px 4px black;
+	border-radius: 7px;
+}
+
+#entrez {
+	font-size: 1.7vw;
+	font-family: schadow;
+}
+
+#txt_shadow {
+	text-shadow: 3px 3px 4px red;
+}
+
+#bonjour {
+	font-style: italic;
+}
+
+#nouveau {
+	/*(153 - 6) / 201 = 73%*/
+	width: 65%;
+	font-size: 0.7vw;
+	/*margin-top: -10%*/
+}
+
+#submit {
+	background-color: rgb(248, 248, 248);
+	width: 20%;
+	font-size: 0.8vw;
+    padding-left: 2%;
+
 }
