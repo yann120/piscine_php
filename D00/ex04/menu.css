@@ -1,0 +1,51 @@
+.violet {
+	background-color: rgb(106, 31, 118);
+}
+.prune {
+	background-color: rgb(162, 19, 116)
+}
+.framboise {
+	background-color: rgb(235, 26, 91)
+}
+.orange {
+	background-color: rgb(241, 100, 47)
+}
+.jaunesafran {
+	background-color: rgb(248, 174, 50);
+}
+
+.btn {
+	color: white;
+	padding: 20px;
+	font-size: 15px;
+	border: none;
+}
+
+#menubar {
+	display: flex;
+	flex-direction: row;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown-content {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	min-width: 120px;
+	box-shadow: 0px 10px 14px 0px gray;
+}
+
+a {
+	color: white;
+	padding: 20px;
+	font-size: 12px;
+	text-decoration: none;
+	border: none;
+}
+
+a:hover {
+	background-color: rgb(62, 62, 63);
+}
