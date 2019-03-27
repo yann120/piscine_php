@@ -10,7 +10,7 @@
 
 <html>
     <body>
-        <form action="." method="get">
+        <form method="get">
             Identifiant: <input type="text" name="login" value="<?php echo $_SESSION['login'] ?>">
             <br />
             Mot de passe: <input type="text" name="passwd" value="<?php echo $_SESSION['passwd'] ?>">
