@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function calcul() {
+                left = document.getElementById("left").value;
+                right = document.getElementById("right").value;
+                operator = document.getElementById("operator").value;
+                
+                if (left < 0 || right < 0 || isNaN(left) || isNaN(right) || left % 1 !== 0 || right % 1 !== 0) {
+                    alert("Error :(");
+                    return;
+                }
+                if ((operator === '/' || operator === '%') && Number(right) === 0) {
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    return;
+                }
+
+                if (operator == "+") {
+                    result = Number(left) + Number(right);
+                }
+                else if (operator == "-") {
+                    result = Number(left) - Number(right);
+                }
+                else if (operator == "*") {
+                    result = Number(left) * Number(right);
+                }
+                else if (operator == "/") {
+                    result = Number(left) / Number(right);
+                }
+                else if (operator == "%") {
+                    result = Number(left) % Number(right);
+                }
+                alert(result);
+                console.log(result);
+            }
+
+            function popup() {
+                alert("Please, use me...");
+            }
+            setInterval(popup, 30000);
+        </script>
+    </head>
+    <body>
+        <input type="text" name="left" id="left">
+        <select name="operator" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" name="right" id="right">
+        <input type="submit" value="Try me!" onclick="calcul();">
+    </body>
+</html>
