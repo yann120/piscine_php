@@ -7,9 +7,8 @@
     }
 	fclose($fp);
     unset($array[$_POST['id']]);
-	print_r($array);
     $fp = fopen('list.csv', 'w');
-    foreach ($tasks as $id => $task) {
+    foreach ($array as $id => $task) {
         fputcsv($fp, array($id, $task), ";", chr(127));
     }
     fclose($fp);

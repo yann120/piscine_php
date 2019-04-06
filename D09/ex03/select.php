@@ -6,5 +6,5 @@
          $array[$row[0]] = $row[1];
      }
      fclose($fp);
-     print_r($array);
+     echo json_encode($array);
 ?>

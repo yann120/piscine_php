@@ -6,7 +6,7 @@ $(document).ready(function() {
         content = prompt("Entrez votre nouvelle tache");
         if (content != null)
         {
-            newTask = $("<div id='"+counter+"' class = 'task'>"+content+"</div>").appendTo('#ft_list');
+            newTask = $("<div id='"+counter+"' class = 'task'>"+content+"</div>").click(removeTask).appendTo('#ft_list');
             document.cookie = counter+"="+content;
             counter += 1;
             document.cookie = "counter="+counter;
@@ -34,11 +34,10 @@ $(document).ready(function() {
             }
             else if (typeof values[1] !== "undefined")
             {
-                newTask = $("<div id='"+Number(values[0])+"' class = 'task'>"+values[1]+"</div>").appendTo('#ft_list');
+                newTask = $("<div id='"+Number(values[0])+"' class = 'task'>"+values[1]+"</div>").click(removeTask).appendTo('#ft_list');
             }
         });
     }
         restoreTasks();
         $("#new").click(addTask);
-        $(".task").click(removeTask)
 });

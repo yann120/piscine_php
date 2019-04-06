@@ -6,11 +6,8 @@ $(document).ready(function() {
         content = prompt("Entrez votre nouvelle tache");
         if (content != null)
         {
-            newTask = $("<div id='"+counter+"' class = 'task'>"+content+"</div>").appendTo('#ft_list');
-            document.cookie = counter+"="+content;
             $.post("insert.php", {'id': counter, 'task': content});
-            counter += 1;
-            document.cookie = "counter="+counter;
+            restoreTasks();
         }
     }
 
@@ -18,31 +15,26 @@ $(document).ready(function() {
         confirmation = confirm("Etes-vous sur de supprimer cette tache ?")
         if (confirmation === true) {
             taskid = $(this).attr('id');
-            $(this).remove();
             $.post("delete.php", {'id': taskid});
+            restoreTasks()
         }
     }
 
 
     function restoreTasks() {
-        allCookies = document.cookie.split(";");
-        allCookies.forEach(function(element){
-            values = element.split('=');
-            if (values[0] === " counter" || values[0] === "counter")
-            {
-                counter = Number(values[1]);
-            }
-            else if (typeof values[1] !== "undefined")
-            {
-                newTask = $("<div id='"+Number(values[0])+"' class = 'task'>"+values[1]+"</div>").appendTo('#ft_list');
-            }
+        $(".task").remove();
+        $.get("select.php?test=ok", function (data) {
+            tasks = JSON.parse(data);
+            for(var id in tasks){
+                $("<div id='"+id+"' class = 'task'>"+tasks[id]+"</div>").click(removeTask).appendTo('#ft_list');
+                if (Number(id) > counter) {
+                    counter = Number(id);
+                }
+            };
+            counter += 1;
+            console.log(counter);
         });
     }
         restoreTasks();
         $("#new").click(addTask);
-        $(".task").click(removeTask)
 });
-
-// a changer sur ex 02 et ex03: les task venant detre ajoutées ne peuvent pas etre supprimés
-// a faire : afficher toute les taches du csv
-// ajax pour ajouter et supprimer données
